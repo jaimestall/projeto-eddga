@@ -1,20 +1,23 @@
 <template>
+  <h1>{{ number }} Componente Root</h1>
   <PrimeiroComponente />
-  <p>O componente que abriga componentes também pode conter dados. {{ info }}</p>
+  <SegundoComponente />
 </template>
 
 <script>
-import PrimeiroComponente from './components/PrimeiroComponente.vue'
+import PrimeiroComponente from "./components/PrimeiroComponente.vue";
+import SegundoComponente from "./components/SegundoComponente.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     PrimeiroComponente,
+    SegundoComponente,
   },
-  data () {
+  data() {
     return {
-      info: '>>Exemplo de dado trazido do data() do componente principal<<',
-    }
-  }
-}
+      number: "1",
+    };
+  },
+};
 </script>

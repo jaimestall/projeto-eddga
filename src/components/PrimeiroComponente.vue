@@ -1,8 +1,6 @@
 <template>
-  <div class="component">
-    <h1>Component principal</h1>
-    <p>Nome: {{ name }}</p>
-    <p>Elemento: {{ elemento }}</p>
+  <div>
+    <h1>{{ number }}Primeiro componente</h1>
   </div>
 </template>
 
@@ -11,15 +9,8 @@ export default {
   name: "PrimeiroComponente",
   data() {
     return {
-      name: "Eddga",
-      elemento: "Fogo",
+      number: "1.1",
     };
   },
 };
 </script>
-<style scoped>
-.component {
-  border: 1px solid black;
-  padding-left: 1em;
-}
-</style>
