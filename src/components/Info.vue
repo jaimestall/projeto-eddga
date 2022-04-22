@@ -4,6 +4,8 @@
     <p>
       <img :src="profilePic" :alt="description" />
     </p>
+    <p>Servidor: {{ server }}</p>
+    <p><button @click="changeServerType">Mudar o servidor</button></p>
     <p>Nome: {{ name }}</p>
     <p>Elemento: {{ element }}</p>
     <p>Raça: {{ race }}</p>
@@ -29,6 +31,15 @@ export default {
       rateMyServer:
         "https://ratemyserver.net/index.php?page=mob_db&mob_id=1115",
     };
+  },
+  methods: {
+    changeServerType() {
+      if (this.server == "renewal") {
+        this.server = "pre-renewal";
+      } else {
+        this.server = "renewal";
+      }
+    },
   },
 };
 </script>
