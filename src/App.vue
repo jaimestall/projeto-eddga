@@ -1,9 +1,20 @@
 <template>
-  <h1>{{ number }} Componente Root</h1>
-  <primeiro-componente />
-  <segundo-componente />
-  <formulario />
-  <info />
+  <div class="content">
+    <div class="component-content">
+      <h1>{{ number }} Componente Root</h1>
+      <p>
+        esse componente é a raiz do projeto e contempla todos os outros
+        componentes. Nele apenas é exportado um valor pelo export default {
+        data() {}} e exportados os components atraves do export default {
+        components: {}}. Também são importados todos os outros componentes no
+        script e chamados no template do Root.
+      </p>
+    </div>
+    <primeiro-componente />
+    <segundo-componente />
+    <formulario />
+    <info />
+  </div>
 </template>
 
 <script>
@@ -27,3 +38,16 @@ export default {
   },
 };
 </script>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.component-content {
+  color: black;
+  margin: auto;
+  width: 60%;
+  text-indent: 1em;
+}
+</style>
