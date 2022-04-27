@@ -41,11 +41,14 @@ export default {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 h1,
 h2 {
   color: black;
+}
+ul {
+  list-style: none;
 }
 p {
   text-indent: 1em;
@@ -53,10 +56,10 @@ p {
 .component-content {
   color: #666;
   margin: auto;
-  width: 70%;
+  width: 60%;
   padding: 20px;
   margin-bottom: 1em;
   background-color: #f0f0f0;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 </style>
