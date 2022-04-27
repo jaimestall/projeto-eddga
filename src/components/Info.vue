@@ -2,16 +2,27 @@
   <div class="component-content">
     <h1>Informações do Monstro</h1>
     <p>
-      Aqui no componente de informações eu fiz uso de diretivas v-bind (que pode ser substituida por simples : (dois pontos) antes do atributo desejado). O v-bind atrela determinado atributo à uma variavel do export default { data() { return{} }}.
+      Aqui no componente de informações eu fiz uso de diretivas<b> v-bind</b>
+      (que pode ser substituida por simples : (dois pontos) antes do atributo
+      desejado). O v-bind atrela determinado <b>atributo de uma tag</b> (href,
+      src, target ) à uma <b>variavel</b> do data().
     </p>
     <p>
-      Além disso, fiz uso das diretivas v-show e das condicionais v-if e v-else. A primeira é uma diretiva de exibir ou não uma determinada tag de acordo com o estado dela (true ou false). A segunda tag, v-if e v-else, é uma condicional que requer um argumento do tipo booleano. Se argumento for true, executa o que estiver v-if, caso contrário, executa v-else. Obs: v-else deve sempre estar seguido de v-if.
+      Além disso, fiz uso das diretivas <b>v-show, v-if e v-else</b>. A primeira
+      é uma diretiva de exibir ou não uma determinada tag de acordo com o estado
+      dela (true ou false). A segunda tag, v-if e v-else, é uma condicional que
+      requer um argumento do tipo <b>booleano</b>. Se argumento for true,
+      executa o que estiver v-if, caso contrário, executa v-else. Obs:
+      <b>v-else deve sempre estar seguido de v-if</b>.
     </p>
     <p>
-      Também, por último foi utilizado um evento @click, que executa determinada função (declarada no export default {methods: {}}) no momento em que o elemento ao qual ela está atrelada for clicado.
+      Também, por último foi utilizado um <b>evento @click</b>, que executa
+      determinada função declarada methods no momento em que o elemento ao qual
+      ela está atrelada for clicado.
     </p>
+    <h2>Exemplo</h2>
     <div class="monster">
-      <div>
+      <div class="monster-photo">
         <img :src="profilePic" :alt="description" />
       </div>
       <div class="monster-data">
@@ -57,11 +68,19 @@ export default {
 };
 </script>
 <style scoped>
+.monster {
+  display: flex;
+  align-content: center;
+}
+.monster-data {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+@media screen and (max-width: 700px) {
   .monster {
-    display: flex;
-  }
-  .monster-data {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
+}
 </style>

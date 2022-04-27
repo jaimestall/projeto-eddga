@@ -1,13 +1,11 @@
 <template>
-  <div class="content">
+  <div class="root">
     <div class="component-content">
       <h1>{{ number }} Componente Root</h1>
       <p>
-        esse componente é a raiz do projeto e contempla todos os outros
-        componentes. Nele apenas é exportado um valor pelo export default {
-        data() {}} e exportados os components atraves do export default {
-        components: {}}. Também são importados todos os outros componentes no
-        script e chamados no template do Root.
+        Esse <b>componente</b> é a raiz do projeto e contempla todos os outros
+        componentes no seu template que são importados no script. Nele apenas é
+        exportado um <b>data()</b> através do export default.
       </p>
     </div>
     <primeiro-componente />
@@ -43,11 +41,22 @@ export default {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+}
+h1,
+h2 {
+  color: black;
+}
+p {
+  text-indent: 1em;
 }
 .component-content {
-  color: black;
+  color: #666;
   margin: auto;
-  width: 60%;
-  text-indent: 1em;
+  width: 70%;
+  padding: 20px;
+  margin-bottom: 1em;
+  background-color: #f0f0f0;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 </style>
