@@ -62,6 +62,9 @@
           <p>
             <a v-bind:href="rateMyServer" target="_blank">Rate my server</a>
           </p>
+          <p>
+            <mudar-imagem @mudarImagem="mudarImagem" />
+          </p>
         </div>
         <div class="info-drops">
           <h3>Itens Derrubados</h3>
@@ -77,8 +80,12 @@
 </template>
 
 <script>
+import mudarImagem from "./MudarImagem.vue";
 export default {
   name: "Info",
+  components: {
+    mudarImagem,
+  },
   data() {
     return {
       profilePic: "/img/eddga.png",
@@ -105,6 +112,13 @@ export default {
         this.server = "pre-renewal";
       } else {
         this.server = "renewal";
+      }
+    },
+    mudarImagem() {
+      if (this.profilePic == "/img/eddga.png") {
+        this.profilePic = "/img/eddga.gif";
+      } else {
+        this.profilePic = "/img/eddga.png";
       }
     },
   },
